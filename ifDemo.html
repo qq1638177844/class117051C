@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+            <input type="radio" value="baidu" name="img" v-model="name"/> 百度
+            <input type="radio" value="cat" name="img" v-model="name"/> 猫            
+            <input type="radio" value="dog" name="img" v-model="name"/> 狗
+            <img v-if="name=='baidu'" src="https://www.baidu.com/img/baidu_jgylogo3.gif" />
+            <img v-else-if="name=='cat'" src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=140275980,3865724661&fm=26&gp=0.jpg" />
+            <img v-else-if="name=='dog'" src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=148443545,806875479&fm=26&gp=0.jpg" />
+            <img v-else src="https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3680604140,401532791&fm=179&app=42&f=JPEG?w=121&h=140" />
+    </div>
+    <script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            show:false,
+            name:""
+        }
+    });
+    </script>
+</body>
+</html>

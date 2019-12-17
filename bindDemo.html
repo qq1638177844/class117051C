@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- 引入vue的核心外部文件-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+<a>{{server.name}}</a>
+<br/>
+<input type="radio" value="baidu" v-model="ename" v-on:click="change" name="web" />百度
+<input type="radio" value="sina" v-model="ename" v-on:click="change" name="web" />新浪
+<input type="radio" value="tt" v-model="ename" v-on:click="change" name="web" />腾讯
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                server:{
+                    name:"",
+                    address:""
+                },
+                ename:""
+            },
+            methods:{
+                change:function(){
+                    alert(this.ename);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
